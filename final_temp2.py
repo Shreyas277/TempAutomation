@@ -36,14 +36,14 @@ Months = {
     '11': 'November',
     '12': 'December'}
 print(f'Month, Day, Time, Temperature, Dewpoint, Humidity')
-for i in range(1,3):
+for i in range(1,13):
     if((i%7)%2!=0 or i%7==0):
         last_date=31
     elif i==2:
         last_date=29
     else:
         last_date=30
-    for day in range(1,7):
+    for day in range(1,last_date+1):
         driver.get(link2+"-"+str(i)+"-"+str(day))
         try:
             Observation=WebDriverWait(driver , 10).until(EC.element_to_be_clickable((By.XPATH,"//tr[contains(@class, 'mat-row')]")))
@@ -64,23 +64,3 @@ for i in range(1,3):
     print("-"*55)
 time.sleep(4)
 driver.quit()
-'''
-def Data_in_Excel(BigData):
-    workbook=xlsxwriter.Workbook("All About Heat")
-    worksheet=workbook.add_worksheet("firstSheet")
-    Headers=list(BigData[0].keys())
-    
-    for i , header in enumerate(Headers):
-        worksheet.write(0,i,str(header))
-
-    for index , datu in enumerate(BigData):
-        for index2,header in enumerate(Headers):
-            worksheet.write(index+1,index2,datu[header])
-    workbook.close()
-
-print("Preparing Excel Sheet of the collected Data")
-#Data_in_Excel(BigData)
-print("Excel Sheet is prepared")
-'''
-
-
