@@ -10,5 +10,7 @@ link=$(cat final_url.txt)
 
 echo $link
 
-python3 final_temp2.py $link
-
+for i in {1..12};
+do
+	python3 final_temp2.py $link $i
+done
