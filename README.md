@@ -25,5 +25,6 @@ Once the account is generated , create a project and add the url and keys of you
 
 As the programmes will be executed the scrapped data will uploaded on our database on Supabase.
 
-<picture>
-src="https://drive.google.com/file/d/1MT7U_OFY6C8AhqPX1VcE1L_AhhudlT1w/view?usp=sharing"
+![Screenshot of the database generated on the supabase.](https://github.com/Shreyas277/TempAutomation/blob/main/Images/Screenshot%202024-12-19%20002807.png)
+
+
