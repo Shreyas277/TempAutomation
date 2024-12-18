@@ -12,5 +12,5 @@ echo $link
 
 for i in {1..12};
 do
-	python3 final_temp2.py $link $i
+	python3 Final_Temperature.py $link $i
 done
